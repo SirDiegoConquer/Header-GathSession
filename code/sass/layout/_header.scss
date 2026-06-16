@@ -1,7 +1,8 @@
 header.header__principal {
     padding-top: 20px;
     padding-bottom: 20px;
-    color: $title-text;
+    color: $subtitle-text;
+    position: relative;
     .container {
         display: flex;
         justify-content: space-between;
@@ -15,30 +16,40 @@ header.header__principal {
 }
 
 nav.nav__principal {
-    padding-right: 120px;
+    padding-right: 80px;
     ul {
         display: flex;
         gap: 40px;
+        font-size: 14px;
     }
+    
     a {
         text-decoration: none;
+        color: $subtitle-text;
     }
     span {
         margin-left: 5px;
     }
     :hover {
-        color: $bg-color-secondary;
+        color: $title-text;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        border-radius: 2px;
+
+        background-color: $bg-color-secondary;
+        top: 70%;
+        right: 40,5%;
     }
 }
 
-div.header__logins {
-    align-items: center;
-    ul {
-        gap: 30px;
-        align-items: center;
-        
-        
-
+nav.nav__principal ul li a.white {
+    color: $title-text;
+    &:hover {
+        color: $bg-color-secondary;
     }
 }
 

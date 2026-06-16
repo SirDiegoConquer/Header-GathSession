@@ -35,9 +35,9 @@
 @mixin btn() {
   display: inline-block;
   color: white;
-  background-color: $title-text;
-  padding: 16px 25px;
-  border-radius: 28px;
+  background-color: $bg-color-secondary;
+  padding: 12px 50px;
+  border-radius: 10px 10px 10px 0px;
   text-decoration: none;
   &:hover {
      background-color: #5080c2;
@@ -48,7 +48,7 @@
   &:hover {
   display: inline-block;
   color: white;
-  background-color: $title-text;
+  background-color: $bg-color-secondary;
   padding: 16px 25px;
   border-radius: 28px;
   text-decoration: none;

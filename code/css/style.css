@@ -26,9 +26,9 @@ h5 {
 .btn {
   display: inline-block;
   color: white;
-  background-color: #264065;
-  padding: 16px 25px;
-  border-radius: 28px;
+  background-color: #DB2A6B;
+  padding: 12px 50px;
+  border-radius: 10px 10px 10px 0px;
   text-decoration: none;
 }
 .btn:hover {
@@ -38,7 +38,7 @@ h5 {
 .btn2:hover {
   display: inline-block;
   color: white;
-  background-color: #264065;
+  background-color: #DB2A6B;
   padding: 16px 25px;
   border-radius: 28px;
   text-decoration: none;
@@ -46,7 +46,7 @@ h5 {
 
 .hero {
   display: flex;
-  margin-top: 40px;
+  margin-top: 140px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -58,28 +58,20 @@ h5 {
   padding: 0;
 }
 
-.hero__img {
-  position: absolute;
-  top: -50px;
-  right: 110px;
-  width: 30%;
-  height: 100px;
-  z-index: -2;
-}
-
 .hero__title {
-  font-size: 50px;
+  font-size: 65px;
   font-weight: 700;
-  color: #264065;
+  color: #FFFFFF;
   line-height: 60px;
   margin-bottom: 20px;
+  font-family: "Merriweather", serif;
 }
 
 .hero__subtitle {
-  font-size: 18px;
-  color: #909090;
+  font-size: 20px;
+  color: #95969B;
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .hero__buttons {
@@ -90,89 +82,45 @@ h5 {
 }
 
 .hero__buttons .btn2 {
-  text-decoration: none;
+  text-decoration: underline;
   display: flex;
   align-items: center;
-}
-
-.hero__buttons .btn2 span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border-radius: 50%;
-  margin-right: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
 }
 
 .activities {
   display: flex;
-  position: relative;
+  align-items: center;
+  gap: 20px;
 }
-.activities .container {
+.activities article {
   display: flex;
   align-items: center;
-  text-align: center;
-  gap: 60px;
-  width: 40%;
-  background-color: white;
-  padding: 10px 65px 10px 22px;
-  border-radius: 10px;
+  gap: 20px;
 }
-
-.activities .container article p {
-  width: 100px;
+.activities img {
+  object-fit: contain;
 }
-
 .activities h3 {
-  font-size: 30px;
-  color: #264065;
-  font-weight: 500;
-}
-
-.activities .container p {
+  color: #FFFFFF;
   font-size: 14px;
-  color: #909090;
-  margin-top: 10px;
+  font-weight: 600;
+  line-height: 20px;
+  max-width: 120px;
 }
 
-.activities__blog--1 {
-  position: absolute;
-  top: -200px;
-  right: -45px;
-  width: 320px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  padding: 20px;
-  z-index: -1;
-}
-.activities__blog--1 h2 {
-  color: #264065;
-  font-size: 16px;
-  padding-top: 10px;
-}
-.activities__blog--2 {
-  position: absolute;
-  top: 38px;
-  right: 30px;
-  width: 350px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  padding: 20px;
-  z-index: -1;
-}
-.activities__blog--2 h2 {
-  color: #264065;
-  font-size: 16px;
-  padding-top: 10px;
+.activities .container {
+  display: flex;
+  justify-content: space-between; /* o space-around */
+  align-items: stretch;
+  gap: 20px;
 }
 
 header.header__principal {
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #264065;
+  color: #95969B;
+  position: relative;
 }
 header.header__principal .container {
   display: flex;
@@ -188,28 +136,39 @@ header.header__principal ul {
 }
 
 nav.nav__principal {
-  padding-right: 120px;
+  padding-right: 80px;
 }
 nav.nav__principal ul {
   display: flex;
   gap: 40px;
+  font-size: 14px;
 }
 nav.nav__principal a {
   text-decoration: none;
+  color: #95969B;
 }
 nav.nav__principal span {
   margin-left: 5px;
 }
 nav.nav__principal :hover {
-  color: #A9D6CB;
+  color: #FFFFFF;
+}
+nav.nav__principal::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #DB2A6B;
+  top: 70%;
+  right: 40, 5%;
 }
 
-div.header__logins {
-  align-items: center;
+nav.nav__principal ul li a.white {
+  color: #FFFFFF;
 }
-div.header__logins ul {
-  gap: 30px;
-  align-items: center;
+nav.nav__principal ul li a.white:hover {
+  color: #DB2A6B;
 }
 
 .container__info {
@@ -222,31 +181,11 @@ div.header__logins ul {
 
 body {
   position: relative;
-  background-image: linear-gradient(to right, #FAF8F5 65%, #A9D6CB 60%);
-  height: auto;
-}
-body::before {
-  content: "";
-  position: absolute;
-  top: 8%;
-  right: 0%;
-  width: 1350px;
-  height: 100%;
-  background-image: url(../img/portada-women.png);
+  background-color: #2B2D38;
+  background-image: url("../img/fondo-GathSession.png");
   background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
-  z-index: -1;
-}
-body::after {
-  content: "";
-  position: absolute;
-  bottom: -60px;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background-color: white;
-  z-index: -2;
+  background-size: 700px;
+  background-position: 115% 205%;
 }
 
 html * {
